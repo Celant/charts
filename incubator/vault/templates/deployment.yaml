@@ -71,7 +71,7 @@ spec:
               fieldRef:
                 fieldPath: status.podIP
           - name: VAULT_CLUSTER_ADDR
-            value: "https://$(POD_IP):8201"
+            value: "https://${POD_IP}:8201"
           - name: VAULT_LOG_LEVEL
             value: {{ .Values.vault.logLevel | quote }}
         {{- if .Values.vault.extraEnv }}
